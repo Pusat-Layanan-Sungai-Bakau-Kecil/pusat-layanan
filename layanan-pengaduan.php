@@ -5,7 +5,7 @@ require_once 'includes/header.php';
 
 <!-- Banner Header -->
 <section style="background:#0a0a0a; position:relative; padding:120px 0 60px; overflow:hidden;">
-    <div style="position:absolute; inset:0; background-image:url('assets/images/bg3.png'); background-size:cover; background-position:center; opacity:0.25;"></div>
+    <div style="position:absolute; inset:0; background-image:url('assets/images/bg3.png'); background-size:cover; background-position:center 75%; opacity:0.40;"></div>
     <div class="container" style="position:relative; z-index:2;">
         <span class="section-label" style="color:rgba(255,255,255,0.60);">Pusat Layanan Warga</span>
         <h1 style="font-family:'Playfair Display',serif; font-size:clamp(2rem,4vw,3.2rem); font-weight:900; color:#ffffff; margin:0 0 12px; line-height:1.15;">
