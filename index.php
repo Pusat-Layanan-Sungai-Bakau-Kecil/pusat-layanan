@@ -1,7 +1,7 @@
 <?php $pageTitle = 'Beranda'; require_once 'includes/header.php'; ?>
 
 <!-- ======================================================
-     HERO SLIDER — Black & White Theme
+     HERO SLIDER — Black & White Theme (3 Slides)
      ====================================================== -->
 <section id="hero" aria-label="Beranda Slider">
 
@@ -10,6 +10,9 @@
 
     <!-- Slide 2 -->
     <div class="slide" style="background-image:url('assets/images/bg2.png');" role="img" aria-label="Hutan Bakau Sungai Bakau Kecil golden hour"></div>
+
+    <!-- Slide 3 -->
+    <div class="slide" style="background-image:url('assets/images/bg3.png');" role="img" aria-label="Pemandangan Sungai Bakau Kecil"></div>
 
     <!-- Main content -->
     <div class="hero-content">
@@ -28,13 +31,14 @@
     <div class="slide-number" id="slide-number" aria-live="polite">
         <span class="current" id="slide-current">01</span>
         <span style="color:rgba(255,255,255,0.30); margin:0 5px;">/</span>
-        <span>02</span>
+        <span>03</span>
     </div>
 
     <!-- Slide dots center-bottom -->
     <div class="slide-dots" role="tablist" aria-label="Navigasi Slide">
         <button class="dot active" role="tab" aria-selected="true"  aria-label="Slide 1" data-index="0"></button>
         <button class="dot"        role="tab" aria-selected="false" aria-label="Slide 2" data-index="1"></button>
+        <button class="dot"        role="tab" aria-selected="false" aria-label="Slide 3" data-index="2"></button>
     </div>
 
     <!-- Arrow nav bottom-right -->
@@ -45,20 +49,6 @@
         <button class="slide-btn" id="btn-next" aria-label="Slide berikutnya">
             <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
         </button>
-    </div>
-
-    <!-- Follow us -->
-    <div class="follow-us" aria-label="Ikuti Kami">
-        <span class="follow-us-label">Ikuti Kami</span>
-        <a href="#" aria-label="Facebook">
-            <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
-        </a>
-        <a href="#" aria-label="Instagram">
-            <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-        </a>
-        <a href="#" aria-label="YouTube">
-            <svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.95 1.95C5.12 20 12 20 12 20s6.88 0 8.59-.47a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#111" stroke="none"/></svg>
-        </a>
     </div>
 
     <!-- Progress line -->
@@ -245,7 +235,7 @@
                     'date'  => '20 Jul 2025',
                     'title' => 'Layanan Surat Online Resmi Dibuka',
                     'desc'  => 'Warga kini dapat mengajukan berbagai surat keterangan secara online melalui portal layanan desa.',
-                    'img'   => 'assets/images/bg1.jpg',
+                    'img'   => 'assets/images/bg3.png',
                 ],
             ];
             foreach ($news as $n): ?>
