@@ -33,13 +33,8 @@
         <!-- Logo / Brand -->
         <a href="index.php" aria-label="Beranda Desa Sungai Bakau Kecil"
            style="display:flex; align-items:center; gap:12px; text-decoration:none;">
-            <!-- Icon mark -->
-            <div style="width:38px; height:38px; background:rgba(255,255,255,0.18); border:1px solid rgba(255,255,255,0.30); border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; transition:background 0.2s;">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 22s-8-4.5-8-11.8A8 8 0 0112 2a8 8 0 018 8.2c0 7.3-8 11.8-8 11.8z"/>
-                    <circle cx="12" cy="10" r="3"/>
-                </svg>
-            </div>
+            <!-- Logo Image (Kabupaten Mempawah) -->
+            <img src="assets/images/logo.png" alt="Logo Kabupaten Mempawah" style="height:40px; width:auto; object-fit:contain; flex-shrink:0;">
             <!-- Text -->
             <div style="line-height:1.1;">
                 <div style="font-size:9.5px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; color:rgba(255,255,255,0.60);" class="nav-brand-sub">Desa</div>
@@ -79,7 +74,7 @@
         <!-- Hamburger — mobile only -->
         <button id="hamburger" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="mobile-menu"
                 style="display:none; flex-direction:column; gap:5px; padding:8px; background:none; border:none; cursor:pointer;"
-                class="lg:hidden" id="hamburger">
+                class="lg:hidden">
             <span class="hamburger-line" style="display:block; width:22px; height:2px; background:#ffffff; border-radius:2px; transition:all 0.3s;"></span>
             <span class="hamburger-line" style="display:block; width:22px; height:2px; background:#ffffff; border-radius:2px; transition:all 0.3s;"></span>
             <span class="hamburger-line" style="display:block; width:22px; height:2px; background:#ffffff; border-radius:2px; transition:all 0.3s;"></span>
