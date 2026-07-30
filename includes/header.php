@@ -42,8 +42,8 @@
             </div>
         </a>
 
-        <!-- Desktop Menu -->
-        <div style="display:flex; align-items:center; gap:6px;" class="hidden lg:flex" id="desktop-nav">
+        <!-- Desktop Menu with spacious gap -->
+        <div style="display:flex; align-items:center; gap:32px;" class="hidden lg:flex" id="desktop-nav">
 
             <!-- Beranda -->
             <a href="index.php" class="nav-link">Beranda</a>
