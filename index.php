@@ -196,66 +196,6 @@
 </section>
 
 
-<!-- ======================================================
-     PENGUMUMAN / BERITA TERBARU
-     ====================================================== -->
-<section aria-labelledby="news-heading" style="background:#ffffff; padding:72px 0; border-top:1px solid #e5e5e5;">
-    <div class="container">
-
-        <div style="display:flex; align-items:flex-end; justify-content:space-between; margin-bottom:36px;" class="reveal">
-            <div>
-                <span class="section-label">Informasi Terkini</span>
-                <span class="divider"></span>
-                <h2 class="section-title" id="news-heading" style="font-size:1.9rem; margin-bottom:0;">Pengumuman Desa</h2>
-            </div>
-            <a href="pengumuman.php" style="font-size:12px; font-weight:700; letter-spacing:0.10em; text-transform:uppercase; color:#111111; text-decoration:none;">
-                Lihat Semua &rarr;
-            </a>
-        </div>
-
-        <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:#e5e5e5;" class="reveal">
-            <?php
-            $news = [
-                [
-                    'cat'   => 'Kesehatan',
-                    'date'  => '28 Jul 2025',
-                    'title' => 'Posyandu Balita Bulan Agustus 2025',
-                    'desc'  => 'Posyandu balita akan dilaksanakan pada 5 Agustus 2025 pukul 09.00 WIB di Balai Desa.',
-                    'img'   => 'assets/images/bg1.jpg',
-                ],
-                [
-                    'cat'   => 'Infrastruktur',
-                    'date'  => '25 Jul 2025',
-                    'title' => 'Perbaikan Jalan Dusun III Dimulai',
-                    'desc'  => 'Pekerjaan perbaikan jalan dusun III dimulai minggu ini dan diperkirakan selesai dalam 2 minggu.',
-                    'img'   => 'assets/images/bg2.png',
-                ],
-                [
-                    'cat'   => 'Administrasi',
-                    'date'  => '20 Jul 2025',
-                    'title' => 'Layanan Surat Online Resmi Dibuka',
-                    'desc'  => 'Warga kini dapat mengajukan berbagai surat keterangan secara online melalui portal layanan desa.',
-                    'img'   => 'assets/images/bg3.png',
-                ],
-            ];
-            foreach ($news as $n): ?>
-            <div class="news-card" style="background:#fff;">
-                <div style="overflow:hidden; height:200px;">
-                    <img src="<?= $n['img'] ?>" alt="<?= $n['title'] ?>" loading="lazy"
-                         style="width:100%; height:200px; object-fit:cover; transition:transform 0.4s; display:block;">
-                </div>
-                <div class="news-card-body">
-                    <span class="news-cat"><?= $n['cat'] ?></span>
-                    <h3 class="news-title"><a href="pengumuman.php" style="color:inherit; text-decoration:none;"><?= $n['title'] ?></a></h3>
-                    <p style="font-size:13px; color:#777; line-height:1.6; margin:0 0 12px;"><?= $n['desc'] ?></p>
-                    <span class="news-date"><?= $n['date'] ?></span>
-                </div>
-            </div>
-            <?php endforeach; ?>
-        </div>
-    </div>
-</section>
-
 
 <!-- ======================================================
      CTA SECTION (Black Theme)

@@ -30,8 +30,6 @@
                 <h3 class="footer-heading">Layanan</h3>
                 <a href="layanan-pengaduan.php" class="footer-link">Pengaduan Penyakit</a>
                 <a href="layanan-hukum.php"     class="footer-link">Layanan Hukum</a>
-                <a href="pengumuman.php"         class="footer-link">Pengumuman</a>
-                <a href="tentang.php"            class="footer-link">Tentang Desa</a>
             </div>
 
             <!-- Navigasi -->
@@ -40,7 +38,6 @@
                 <a href="index.php"              class="footer-link">Beranda</a>
                 <a href="#layanan"               class="footer-link">Layanan Utama</a>
                 <a href="kontak.php"             class="footer-link">Kontak</a>
-                <a href="tentang.php"            class="footer-link">Profil Desa</a>
             </div>
 
             <!-- Kontak -->
@@ -87,7 +84,25 @@
     </div>
 </footer>
 
+<!-- ===== BACK TO TOP BUTTON ===== -->
+<button id="back-to-top" aria-label="Kembali ke atas" title="Kembali ke atas">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="18 15 12 9 6 15"/>
+    </svg>
+</button>
+
 <!-- ===== JAVASCRIPT ===== -->
 <script src="assets/js/main.js"></script>
+
+<script>
+/* Back to top */
+const btn = document.getElementById('back-to-top');
+window.addEventListener('scroll', () => {
+    btn.classList.toggle('visible', window.scrollY > 400);
+});
+btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+</script>
 </body>
 </html>
