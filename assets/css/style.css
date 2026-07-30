@@ -756,6 +756,70 @@ body {
     border-color: #111;
 }
 
+/* ── SIDEBAR ACCORDION ── */
+.accordion-box {
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    margin-bottom: 16px;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.accordion-box:hover {
+    border-color: #d0d0d0;
+}
+
+.accordion-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    background: #fafafa;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #111111;
+    transition: background 0.2s ease;
+    user-select: none;
+}
+
+.accordion-header:hover {
+    background: #f4f4f4;
+}
+
+.accordion-header.active {
+    background: #ffffff;
+    border-bottom: 1px solid #eee;
+}
+
+.accordion-chevron {
+    width: 18px;
+    height: 18px;
+    transition: transform 0.3s ease;
+    color: #555555;
+    flex-shrink: 0;
+}
+
+.accordion-header.active .accordion-chevron {
+    transform: rotate(180deg);
+}
+
+.accordion-body {
+    display: none;
+    padding: 20px;
+    background: #ffffff;
+}
+
+.accordion-body.open {
+    display: block;
+}
+
+
 .footer-brand-name {
 
     font-family: 'Playfair Display', serif;
@@ -1024,7 +1088,7 @@ body {
         gap: 16px !important;
     }
     .form-sidebar {
-        order: -1;
+        order: 1; /* Form comes first on mobile, sidebar comes below */
     }
 
     section[aria-labelledby="news-heading"]  { padding: 48px 0 !important; }

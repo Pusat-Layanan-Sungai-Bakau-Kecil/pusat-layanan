@@ -199,4 +199,22 @@ document.addEventListener('DOMContentLoaded', function () {
         revealEls.forEach(el => revealObserver.observe(el));
     }
 
+
+    // ─────────────────────────────────────────────
+    // 6. SIDEBAR ACCORDION TOGGLE
+    // ─────────────────────────────────────────────
+    document.querySelectorAll('.accordion-header').forEach(btn => {
+        btn.addEventListener('click', function () {
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', !isExpanded);
+            this.classList.toggle('active');
+            
+            const body = this.nextElementSibling;
+            if (body && body.classList.contains('accordion-body')) {
+                body.classList.toggle('open');
+            }
+        });
+    });
+
 });
+

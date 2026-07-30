@@ -78,35 +78,51 @@ require_once 'includes/header.php';
 
             <!-- Sidebar Info -->
             <div class="form-sidebar">
-                <div style="background:#fafafa; border:1px solid #e5e5e5; padding:28px; margin-bottom:24px;">
-                    <h3 style="font-family:'Playfair Display',serif; font-size:1.2rem; font-weight:700; color:#111; margin:0 0 12px;">Kontak Darurat Kesehatan</h3>
-                    <p style="font-size:13px; color:#555; line-height:1.7; margin:0 0 18px;">
-                        Jika mengalami kondisi darurat medis yang butuh penanganan secepatnya, segera hubungi kontak berikut:
-                    </p>
-                    <div style="display:flex; flex-direction:column; gap:12px; font-size:13px;">
-                        <div>
-                            <strong style="color:#111111; display:block;">Puskesmas Pembantu Desa</strong>
-                            <span style="color:#444;">(0561) 987-6543</span>
-                        </div>
-                        <div>
-                            <strong style="color:#111111; display:block;">Ambulans Desa (24 Jam)</strong>
-                            <span style="color:#444;">0812-3456-7890</span>
-                        </div>
-                        <div>
-                            <strong style="color:#111111; display:block;">Petugas Kesehatan Desa</strong>
-                            <span style="color:#444;">0852-9876-5432</span>
+                <!-- Accordion Box 1: Kontak Darurat -->
+                <div class="accordion-box">
+                    <button class="accordion-header active" type="button" aria-expanded="true">
+                        <span>Kontak Darurat Kesehatan</span>
+                        <svg class="accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"/>
+                        </svg>
+                    </button>
+                    <div class="accordion-body open">
+                        <p style="font-size:13px; color:#555; line-height:1.7; margin:0 0 16px;">
+                            Jika mengalami kondisi darurat medis yang butuh penanganan secepatnya, segera hubungi kontak berikut:
+                        </p>
+                        <div style="display:flex; flex-direction:column; gap:12px; font-size:13px;">
+                            <div>
+                                <strong style="color:#111111; display:block;">Puskesmas Pembantu Desa</strong>
+                                <span style="color:#444;">(0561) 987-6543</span>
+                            </div>
+                            <div>
+                                <strong style="color:#111111; display:block;">Ambulans Desa (24 Jam)</strong>
+                                <span style="color:#444;">0812-3456-7890</span>
+                            </div>
+                            <div>
+                                <strong style="color:#111111; display:block;">Petugas Kesehatan Desa</strong>
+                                <span style="color:#444;">0852-9876-5432</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div style="background:#ffffff; border:1px solid #e5e5e5; padding:28px;">
-                    <h3 style="font-family:'Playfair Display',serif; font-size:1.2rem; font-weight:700; color:#111; margin:0 0 12px;">Prosedur Penanganan</h3>
-                    <ol style="font-size:13px; color:#555; line-height:1.8; margin:0; padding-left:18px;">
-                        <li style="margin-bottom:8px;">Laporan masuk dan diverifikasi tim kesehatan desa.</li>
-                        <li style="margin-bottom:8px;">Petugas kesehatan melakukan konfirmasi via telepon/WA.</li>
-                        <li style="margin-bottom:8px;">Tim medis menuju ke lokasi jika diperlukan penanganan fisik.</li>
-                        <li>Laporan dicatat dalam sistem pemantauan kesehatan desa.</li>
-                    </ol>
+                <!-- Accordion Box 2: Prosedur Penanganan -->
+                <div class="accordion-box">
+                    <button class="accordion-header" type="button" aria-expanded="false">
+                        <span>Prosedur Penanganan</span>
+                        <svg class="accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"/>
+                        </svg>
+                    </button>
+                    <div class="accordion-body">
+                        <ol style="font-size:13px; color:#555; line-height:1.8; margin:0; padding-left:18px;">
+                            <li style="margin-bottom:8px;">Laporan masuk dan diverifikasi tim kesehatan desa.</li>
+                            <li style="margin-bottom:8px;">Petugas kesehatan melakukan konfirmasi via telepon/WA.</li>
+                            <li style="margin-bottom:8px;">Tim medis menuju ke lokasi jika diperlukan penanganan fisik.</li>
+                            <li>Laporan dicatat dalam sistem pemantauan kesehatan desa.</li>
+                        </ol>
+                    </div>
                 </div>
             </div>
 

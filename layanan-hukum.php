@@ -103,25 +103,41 @@ require_once 'includes/header.php';
 
             <!-- Sidebar Info -->
             <div class="form-sidebar">
-                <div style="background:#fafafa; border:1px solid #e5e5e5; padding:28px; margin-bottom:24px;">
-                    <h3 style="font-family:'Playfair Display',serif; font-size:1.2rem; font-weight:700; color:#111; margin:0 0 12px;">Pos Bantuan Hukum Desa</h3>
-                    <p style="font-size:13px; color:#555; line-height:1.7; margin:0 0 16px;">
-                        Jadwal konsultasi tatap muka gratis bersama paralegal / advokat pendamping desa:
-                    </p>
-                    <div style="font-size:13px; color:#333; line-height:1.8;">
-                        <strong style="color:#111111; display:block;">Jadwal Layanan:</strong>
-                        <span>Setiap Hari Selasa &amp; Kamis</span><br>
-                        <span>Pukul 09.00 – 14.00 WIB</span><br><br>
-                        <strong style="color:#111111; display:block;">Lokasi:</strong>
-                        <span>Ruang Mediasi Balai Desa Sungai Bakau Kecil</span>
+                <!-- Accordion Box 1: Pos Bantuan Hukum -->
+                <div class="accordion-box">
+                    <button class="accordion-header active" type="button" aria-expanded="true">
+                        <span>Pos Bantuan Hukum Desa</span>
+                        <svg class="accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"/>
+                        </svg>
+                    </button>
+                    <div class="accordion-body open">
+                        <p style="font-size:13px; color:#555; line-height:1.7; margin:0 0 16px;">
+                            Jadwal konsultasi tatap muka gratis bersama paralegal / advokat pendamping desa:
+                        </p>
+                        <div style="font-size:13px; color:#333; line-height:1.8;">
+                            <strong style="color:#111111; display:block;">Jadwal Layanan:</strong>
+                            <span>Setiap Hari Selasa &amp; Kamis</span><br>
+                            <span>Pukul 09.00 – 14.00 WIB</span><br><br>
+                            <strong style="color:#111111; display:block;">Lokasi:</strong>
+                            <span>Ruang Mediasi Balai Desa Sungai Bakau Kecil</span>
+                        </div>
                     </div>
                 </div>
 
-                <div style="background:#ffffff; border:1px solid #e5e5e5; padding:28px;">
-                    <h3 style="font-family:'Playfair Display',serif; font-size:1.2rem; font-weight:700; color:#111; margin:0 0 12px;">Prinsip Kerahasiaan</h3>
-                    <p style="font-size:13px; color:#555; line-height:1.7; margin:0;">
-                        Seluruh informasi dan berkas yang disampaikan dalam layanan hukum desa terjamin kerahasiaannya sesuai ketentuan undang-undang bantuan hukum.
-                    </p>
+                <!-- Accordion Box 2: Kerahasiaan -->
+                <div class="accordion-box">
+                    <button class="accordion-header" type="button" aria-expanded="false">
+                        <span>Prinsip Kerahasiaan</span>
+                        <svg class="accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"/>
+                        </svg>
+                    </button>
+                    <div class="accordion-body">
+                        <p style="font-size:13px; color:#555; line-height:1.7; margin:0;">
+                            Seluruh informasi dan berkas yang disampaikan dalam layanan hukum desa terjamin kerahasiaannya sesuai ketentuan undang-undang bantuan hukum.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
