@@ -187,15 +187,15 @@ body {
     z-index: 1;
 }
 
-/* ── HERO CONTENT ── */
+/* ── HERO CONTENT (Left aligned, vertically centered) ── */
 .hero-content {
     position: absolute;
     inset: 0;
     z-index: 10;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    padding-bottom: 80px;
+    justify-content: center;
+    padding-top: 40px; /* Offset to perfectly center vertically taking navbar into account */
 }
 
 .hero-inner {
@@ -209,7 +209,7 @@ body {
     font-family: 'Playfair Display', Georgia, serif;
     font-weight: 900;
     color: #ffffff;
-    line-height: 1.0;
+    line-height: 1.05;
     letter-spacing: -0.02em;
     margin: 0 0 20px 0;
     font-size: clamp(2.6rem, 5.8vw, 5.2rem);
