@@ -18,37 +18,60 @@ document.addEventListener('DOMContentLoaded', function () {
     let autoplayTimer  = null;
     const AUTOPLAY_MS  = 6000;
 
+    const heroTextWrap = document.getElementById('hero-text-wrap');
+
+    function triggerHeroTextIn() {
+        if (!heroTextWrap) return;
+        heroTextWrap.classList.remove('exit', 'animating');
+        // Force reflow so animation restarts cleanly
+        void heroTextWrap.offsetWidth;
+        heroTextWrap.classList.add('animating');
+    }
+
     function goToSlide(index) {
         if (slides.length === 0) return;
 
-        // Remove active class from current slide & dot
-        slides[currentSlide].classList.remove('active');
-        if (dots[currentSlide]) {
-            dots[currentSlide].classList.remove('active');
-            dots[currentSlide].setAttribute('aria-selected', 'false');
+        // 1. Play exit animation on current text
+        if (heroTextWrap) {
+            heroTextWrap.classList.remove('animating');
+            heroTextWrap.classList.add('exit');
         }
 
-        // Calculate next slide index
-        currentSlide = (index + slides.length) % slides.length;
+        // 2. After exit completes (350ms), switch slide and animate text back in
+        setTimeout(function () {
+            // Remove active class from current slide & dot
+            slides[currentSlide].classList.remove('active');
+            if (dots[currentSlide]) {
+                dots[currentSlide].classList.remove('active');
+                dots[currentSlide].setAttribute('aria-selected', 'false');
+            }
 
-        // Activate new slide & dot
-        slides[currentSlide].classList.add('active');
-        if (dots[currentSlide]) {
-            dots[currentSlide].classList.add('active');
-            dots[currentSlide].setAttribute('aria-selected', 'true');
-        }
+            // Calculate next slide index
+            currentSlide = (index + slides.length) % slides.length;
 
-        // Update current slide number display (e.g. 01, 02)
-        if (slideCurrent) {
-            slideCurrent.textContent = String(currentSlide + 1).padStart(2, '0');
-        }
+            // Activate new slide & dot
+            slides[currentSlide].classList.add('active');
+            if (dots[currentSlide]) {
+                dots[currentSlide].classList.add('active');
+                dots[currentSlide].setAttribute('aria-selected', 'true');
+            }
 
-        // Reset and trigger progress bar animation
-        if (progressBar) {
-            progressBar.classList.remove('animating');
-            void progressBar.offsetWidth; // Force reflow
-            progressBar.classList.add('animating');
-        }
+            // Update slide number display
+            if (slideCurrent) {
+                slideCurrent.textContent = String(currentSlide + 1).padStart(2, '0');
+            }
+
+            // Reset and trigger progress bar animation
+            if (progressBar) {
+                progressBar.classList.remove('animating');
+                void progressBar.offsetWidth;
+                progressBar.classList.add('animating');
+            }
+
+            // 3. Play entrance animation
+            triggerHeroTextIn();
+
+        }, 350);
     }
 
     function nextSlide() { goToSlide(currentSlide + 1); }
@@ -91,7 +114,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Initialize slider
     if (slides.length > 0) {
-        goToSlide(0);
+        // Direct init: activate slide 0 without exit animation
+        slides[0].classList.add('active');
+        if (dots[0]) { dots[0].classList.add('active'); dots[0].setAttribute('aria-selected','true'); }
+        if (slideCurrent) slideCurrent.textContent = '01';
+        if (progressBar) {
+            void progressBar.offsetWidth;
+            progressBar.classList.add('animating');
+        }
+        // Trigger hero text entrance after a short delay
+        setTimeout(triggerHeroTextIn, 300);
         startAutoplay();
     }
 
