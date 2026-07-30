@@ -28,7 +28,7 @@ body {
         rgba(0, 0, 0, 0.40) 55%,
         transparent 100%
     );
-    padding-bottom: 40px;
+    padding-bottom: 12px;
     transition: background 0.35s ease;
 }
 
@@ -39,7 +39,7 @@ body {
         rgba(0, 0, 0, 0.50) 55%,
         transparent 100%
     );
-    padding-bottom: 40px;
+    padding-bottom: 12px;
 }
 
 .nav-link {
