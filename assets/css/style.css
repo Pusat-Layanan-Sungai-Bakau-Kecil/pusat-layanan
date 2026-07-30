@@ -709,7 +709,48 @@ body {
     border-top: 1px solid #1a1a1a;
 }
 
+/* ── FORM PAGE LAYOUT ── */
+.form-layout {
+    display: grid;
+    grid-template-columns: 1.8fr 1fr;
+    gap: 48px;
+    align-items: start;
+}
+
+.form-row-2col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #333;
+    margin-bottom: 6px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    background: #fff;
+    outline: none;
+    font-family: inherit;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+}
+
+.form-input:focus {
+    border-color: #111;
+}
+
 .footer-brand-name {
+
     font-family: 'Playfair Display', serif;
     font-size: 1.1rem;
     font-weight: 700;
@@ -962,6 +1003,18 @@ body {
     #layanan { padding: 48px 0 !important; }
 
     section[aria-labelledby="about-heading"] { padding: 48px 0 !important; }
+
+    /* ── FORM PAGE RESPONSIVE ── */
+    .form-layout {
+        grid-template-columns: 1fr !important;
+    }
+    .form-row-2col {
+        grid-template-columns: 1fr !important;
+    }
+    .form-sidebar {
+        order: -1; /* sidebar goes on top on mobile so it's visible first */
+    }
+
     section[aria-labelledby="news-heading"]  { padding: 48px 0 !important; }
 }
 

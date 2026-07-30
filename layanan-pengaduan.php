@@ -20,7 +20,7 @@ require_once 'includes/header.php';
 <!-- Content -->
 <section style="background:#ffffff; padding:72px 0;">
     <div class="container">
-        <div style="display:grid; grid-template-columns:1.8fr 1fr; gap:48px;">
+        <div class="form-layout">
             
             <!-- Form Pengaduan -->
             <div>
@@ -31,29 +31,29 @@ require_once 'includes/header.php';
                 </h2>
 
                 <form action="#" method="POST" style="display:flex; flex-direction:column; gap:20px;">
-                    <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px;">
+                    <div class="form-row-2col">
                         <div>
-                            <label style="display:block; font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:0.08em; color:#333; margin-bottom:6px;">Nama Lengkap *</label>
-                            <input type="text" required placeholder="Masukkan nama Anda" style="width:100%; padding:12px 14px; font-size:13.5px; border:1px solid #ccc; background:#fff; outline:none; font-family:inherit;">
+                            <label class="form-label">Nama Lengkap *</label>
+                            <input type="text" required placeholder="Masukkan nama Anda" class="form-input">
                         </div>
                         <div>
-                            <label style="display:block; font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:0.08em; color:#333; margin-bottom:6px;">NIK (Nomor Induk Kependudukan) *</label>
-                            <input type="text" required placeholder="16 digit NIK" style="width:100%; padding:12px 14px; font-size:13.5px; border:1px solid #ccc; background:#fff; outline:none; font-family:inherit;">
+                            <label class="form-label">NIK (Nomor Induk Kependudukan) *</label>
+                            <input type="text" required placeholder="16 digit NIK" class="form-input">
                         </div>
                     </div>
 
-                    <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px;">
+                    <div class="form-row-2col">
                         <div>
-                            <label style="display:block; font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:0.08em; color:#333; margin-bottom:6px;">Nomor HP / WhatsApp *</label>
-                            <input type="tel" required placeholder="Contoh: 081234567890" style="width:100%; padding:12px 14px; font-size:13.5px; border:1px solid #ccc; background:#fff; outline:none; font-family:inherit;">
+                            <label class="form-label">Nomor HP / WhatsApp *</label>
+                            <input type="tel" required placeholder="Contoh: 081234567890" class="form-input">
                         </div>
                         <div>
-                            <label style="display:block; font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:0.08em; color:#333; margin-bottom:6px;">Kategori Pengaduan *</label>
-                            <select required style="width:100%; padding:12px 14px; font-size:13.5px; border:1px solid #ccc; background:#fff; outline:none; font-family:inherit;">
+                            <label class="form-label">Kategori Pengaduan *</label>
+                            <select required class="form-input">
                                 <option value="">-- Pilih Kategori --</option>
                                 <option value="demam_berdarah">Laporan Kasus Demam Berdarah (DBD)</option>
                                 <option value="penyakit_menular">Penyakit Menular Lainnya</option>
-                                <option value="sanitasi">Masalah Air Clean &amp; Sanitasi Lingkungan</option>
+                                <option value="sanitasi">Masalah Air Bersih &amp; Sanitasi Lingkungan</option>
                                 <option value="posyandu">Layanan Balita / Ibu Hamil</option>
                                 <option value="lainnya">Lainnya</option>
                             </select>
@@ -61,13 +61,13 @@ require_once 'includes/header.php';
                     </div>
 
                     <div>
-                        <label style="display:block; font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:0.08em; color:#333; margin-bottom:6px;">Alamat / Lokasi Kejadian *</label>
-                        <input type="text" required placeholder="Dusun, RT/RW, atau petunjuk lokasi" style="width:100%; padding:12px 14px; font-size:13.5px; border:1px solid #ccc; background:#fff; outline:none; font-family:inherit;">
+                        <label class="form-label">Alamat / Lokasi Kejadian *</label>
+                        <input type="text" required placeholder="Dusun, RT/RW, atau petunjuk lokasi" class="form-input">
                     </div>
 
                     <div>
-                        <label style="display:block; font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:0.08em; color:#333; margin-bottom:6px;">Detail Gejala / Masalah Kesehatan *</label>
-                        <textarea rows="5" required placeholder="Jelaskan secara singkat gejala yang dialami, jumlah orang terdampak, atau masalah yang ditemukan..." style="width:100%; padding:12px 14px; font-size:13.5px; border:1px solid #ccc; background:#fff; outline:none; font-family:inherit; resize:vertical;"></textarea>
+                        <label class="form-label">Detail Gejala / Masalah Kesehatan *</label>
+                        <textarea rows="5" required placeholder="Jelaskan secara singkat gejala yang dialami, jumlah orang terdampak, atau masalah yang ditemukan..." class="form-input" style="resize:vertical;"></textarea>
                     </div>
 
                     <button type="submit" class="btn-dark" style="align-self:flex-start; cursor:pointer;">
@@ -77,7 +77,7 @@ require_once 'includes/header.php';
             </div>
 
             <!-- Sidebar Info -->
-            <div>
+            <div class="form-sidebar">
                 <div style="background:#fafafa; border:1px solid #e5e5e5; padding:28px; margin-bottom:24px;">
                     <h3 style="font-family:'Playfair Display',serif; font-size:1.2rem; font-weight:700; color:#111; margin:0 0 12px;">Kontak Darurat Kesehatan</h3>
                     <p style="font-size:13px; color:#555; line-height:1.7; margin:0 0 18px;">
@@ -113,5 +113,6 @@ require_once 'includes/header.php';
         </div>
     </div>
 </section>
+
 
 <?php require_once 'includes/footer.php'; ?>
