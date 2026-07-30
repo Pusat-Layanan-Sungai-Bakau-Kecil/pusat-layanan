@@ -43,7 +43,7 @@
         </a>
 
         <!-- Desktop Menu with spacious gap -->
-        <div style="display:flex; align-items:center; gap:32px;" class="hidden lg:flex" id="desktop-nav">
+        <div id="desktop-nav" class="nav-desktop">
 
             <!-- Beranda -->
             <a href="index.php" class="nav-link">Beranda</a>
@@ -72,12 +72,10 @@
         </div>
 
         <!-- Hamburger — mobile only -->
-        <button id="hamburger" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="mobile-menu"
-                style="display:none; flex-direction:column; gap:5px; padding:8px; background:none; border:none; cursor:pointer;"
-                class="lg:hidden">
-            <span class="hamburger-line" style="display:block; width:22px; height:2px; background:#ffffff; border-radius:2px; transition:all 0.3s;"></span>
-            <span class="hamburger-line" style="display:block; width:22px; height:2px; background:#ffffff; border-radius:2px; transition:all 0.3s;"></span>
-            <span class="hamburger-line" style="display:block; width:22px; height:2px; background:#ffffff; border-radius:2px; transition:all 0.3s;"></span>
+        <button id="hamburger" class="nav-hamburger" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="mobile-menu">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
         </button>
 
     </div>

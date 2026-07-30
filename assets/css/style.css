@@ -22,27 +22,23 @@ body {
     position: fixed;
     top: 0; left: 0; right: 0;
     z-index: 100;
-    background: transparent;
-    transition: background 0.4s ease, box-shadow 0.4s ease;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.65) 0%,
+        rgba(0, 0, 0, 0.20) 60%,
+        transparent 100%
+    );
+    transition: background 0.4s ease;
 }
 
 #navbar.scrolled {
-    background: #ffffff;
-    box-shadow: 0 1px 0 rgba(0,0,0,0.12);
-}
-
-#navbar.scrolled .nav-link,
-#navbar.scrolled .nav-brand-name,
-#navbar.scrolled .nav-brand-sub {
-    color: #111111 !important;
-}
-
-#navbar.scrolled .hamburger-line {
-    background: #111111;
-}
-
-#navbar.scrolled .nav-link:hover {
-    color: #555555 !important;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.85) 0%,
+        rgba(0, 0, 0, 0.35) 70%,
+        transparent 100%
+    );
+    box-shadow: none;
 }
 
 .nav-link {
@@ -153,7 +149,7 @@ body {
     position: absolute;
     inset: 0;
     background-size: cover;
-    background-position: center top;
+    background-position: center center;
     opacity: 0;
     transition: opacity 1.4s cubic-bezier(0.4, 0, 0.2, 1);
     will-change: opacity;
@@ -594,6 +590,17 @@ body {
 
 .about-img-wrap:hover img { transform: scale(1.03); }
 
+/* Grayscale → Color on hover */
+.about-img-grayscale {
+    filter: grayscale(100%);
+    transition: filter 0.6s ease, transform 0.5s ease !important;
+}
+
+.about-img-wrap:hover .about-img-grayscale {
+    filter: grayscale(0%);
+    transform: scale(1.03);
+}
+
 /* ── CTA SECTION (Black Theme) ── */
 .cta-section {
     background: #111111;
@@ -815,24 +822,142 @@ body {
     padding: 0 48px;
 }
 
-@media (max-width: 768px) {
-    .container { padding: 0 20px; }
-    .hero-inner { padding: 0 20px; }
-    .slide-number { left: 20px; bottom: 36px; }
-    .slide-nav { right: 20px; bottom: 28px; }
-    .follow-us { right: 20px; bottom: 78px; }
-    .hero-title { font-size: clamp(2rem, 8vw, 3.2rem); }
-    .hero-quote { font-size: 13px; }
-    .hero-content { padding-bottom: 64px; }
-    .hero-progress-wrap { display: none; }
-}
 
-@media (max-width: 480px) {
-    .hero-title { font-size: 1.95rem; }
-    .follow-us { display: none; }
-}
+
 
 /* ── SCROLLBAR ── */
 ::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: #f0f0f0; }
 ::-webkit-scrollbar-thumb { background: #111111; }
+
+/* ══════════════════════════════════════════════
+   NAV — Desktop vs Mobile control
+══════════════════════════════════════════════ */
+.nav-desktop {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.nav-hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    padding: 8px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger-line {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #ffffff;
+    border-radius: 2px;
+    transition: all 0.3s;
+}
+
+
+
+
+/* ══════════════════════════════════════════════
+   TABLET  ≤ 1024px  — hamburger appears
+══════════════════════════════════════════════ */
+@media (max-width: 1024px) {
+    .nav-desktop  { display: none !important; }
+    .nav-hamburger { display: flex !important; }
+}
+
+/* ══════════════════════════════════════════════
+   MOBILE  ≤ 768px  — full responsive layout
+══════════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+    /* Container */
+    .container { padding: 0 20px; }
+
+    /* ── HERO ── */
+    .hero-inner   { padding: 0 20px; }
+    .hero-title   { font-size: clamp(1.85rem, 7.5vw, 2.8rem); }
+    .hero-quote   { font-size: 13px; max-width: 100%; }
+    .hero-content { padding-bottom: 80px; }
+    .slide-number { left: 20px; bottom: 36px; }
+    .slide-nav    { right: 20px; bottom: 28px; }
+    .follow-us    { right: 20px; bottom: 78px; }
+    .hero-progress-wrap { display: none; }
+
+    /* ── STATS — 2×2 ── */
+    .stats-section > .container > div {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    .stat-item { border-right: none !important; }
+    .stat-item:nth-child(-n+2) { border-bottom: 1px solid #e5e5e5; }
+
+    /* ── LAYANAN UTAMA — 1 col ── */
+    #layanan > .container > div:last-child {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* ── TENTANG DESA — stack image above text ── */
+    #hero ~ section + section > .container > .reveal,
+    section[aria-labelledby="about-heading"] > .container > .reveal {
+        grid-template-columns: 1fr !important;
+        gap: 28px !important;
+    }
+
+    .about-img-wrap img { height: 260px; }
+
+    /* ── PENGUMUMAN / NEWS — 1 col ── */
+    section[aria-labelledby="news-heading"] > .container > div:last-child {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* ── BERITA header row ── */
+    section[aria-labelledby="news-heading"] > .container > div:first-child {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 12px;
+    }
+
+    /* ── CTA ── */
+    .cta-section { padding: 56px 0; }
+    .cta-section div[style*="display:flex"] {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    .btn-primary, .btn-outline { width: 100%; text-align: center; }
+
+    /* ── FOOTER — stack all columns ── */
+    .site-footer .container > div {
+        grid-template-columns: 1fr !important;
+        gap: 32px;
+    }
+
+    .footer-bottom .container {
+        flex-direction: column !important;
+        text-align: center;
+        gap: 4px;
+    }
+
+    /* ── SERVICE section padding ── */
+    #layanan { padding: 48px 0 !important; }
+
+    section[aria-labelledby="about-heading"] { padding: 48px 0 !important; }
+    section[aria-labelledby="news-heading"]  { padding: 48px 0 !important; }
+}
+
+/* ══════════════════════════════════════════════
+   SMALL MOBILE  ≤ 480px
+══════════════════════════════════════════════ */
+@media (max-width: 480px) {
+    .hero-title  { font-size: 1.75rem; }
+    .follow-us   { display: none; }
+    .stat-num    { font-size: 2rem; }
+
+    /* Stats 1 col on very small */
+    .stats-section > .container > div {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+

@@ -6,13 +6,13 @@
 <section id="hero" aria-label="Beranda Slider">
 
     <!-- Slide 1 -->
-    <div class="slide active" style="background-image:url('assets/images/bg1.jpg');" role="img" aria-label="Kawasan Mangrove Sungai Bakau Kecil saat senja"></div>
+    <div class="slide active" style="background-image:url('assets/images/bg1.jpg'); background-position:center 55%;" role="img" aria-label="Kawasan Mangrove Sungai Bakau Kecil saat senja"></div>
 
     <!-- Slide 2 -->
-    <div class="slide" style="background-image:url('assets/images/bg2.png');" role="img" aria-label="Hutan Bakau Sungai Bakau Kecil golden hour"></div>
+    <div class="slide" style="background-image:url('assets/images/bg2.png'); background-position:center 40%;" role="img" aria-label="Hutan Bakau Sungai Bakau Kecil golden hour"></div>
 
     <!-- Slide 3 -->
-    <div class="slide" style="background-image:url('assets/images/bg3.png');" role="img" aria-label="Pemandangan Sungai Bakau Kecil"></div>
+    <div class="slide" style="background-image:url('assets/images/bg3.png'); background-position:center 65%;" role="img" aria-label="Pemandangan Sungai Bakau Kecil"></div>
 
     <!-- Main content -->
     <div class="hero-content">
@@ -166,7 +166,7 @@
 
             <!-- Image -->
             <div class="about-img-wrap">
-                <img src="assets/images/bg1.jpg" alt="Kawasan mangrove Desa Sungai Bakau Kecil" loading="lazy">
+                <img src="assets/images/kantordesa.png" alt="Kantor Desa Sungai Bakau Kecil" loading="lazy" class="about-img-grayscale">
             </div>
 
             <!-- Text -->
