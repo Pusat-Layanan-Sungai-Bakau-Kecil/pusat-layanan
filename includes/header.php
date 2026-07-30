@@ -84,14 +84,20 @@
     <div id="mobile-menu" class="mobile-menu" aria-hidden="true">
         <a href="index.php" class="mobile-nav-link" style="justify-content:flex-start;">Beranda</a>
         <button class="mobile-nav-link" id="mobile-layanan-btn" aria-expanded="false" aria-controls="mobile-layanan-sub">
-            Layanan
+            <span>Layanan</span>
             <svg id="mobile-layanan-chevron" style="width:16px; height:16px; transition:transform 0.25s;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                 <polyline points="6 9 12 15 18 9"/>
             </svg>
         </button>
         <div id="mobile-layanan-sub" class="mobile-sub-menu" aria-hidden="true">
-            <a href="layanan-pengaduan.php" class="mobile-sub-link">Layanan &amp; Pengaduan Penyakit</a>
-            <a href="layanan-hukum.php"     class="mobile-sub-link">Layanan Hukum</a>
+            <a href="layanan-pengaduan.php" class="mobile-sub-link">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+                Layanan &amp; Pengaduan Penyakit
+            </a>
+            <a href="layanan-hukum.php" class="mobile-sub-link">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h18"/></svg>
+                Layanan Hukum
+            </a>
         </div>
     </div>
 </nav>
