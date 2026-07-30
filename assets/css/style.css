@@ -142,17 +142,18 @@ body {
     height: 220px;
     background: linear-gradient(
         to bottom,
-        rgba(0, 0, 0, 0.75) 0%,
+        rgba(0, 0, 0, 0.80) 0%,
         rgba(0, 0, 0, 0.35) 55%,
         transparent 100%
     );
-    z-index: 5;
+    z-index: 4;
     pointer-events: none;
 }
 
 .slide {
     position: absolute;
     inset: 0;
+    z-index: 1;
     background-size: cover;
     background-position: center center;
     opacity: 0;
@@ -160,7 +161,7 @@ body {
     will-change: opacity;
 }
 
-.slide.active { opacity: 1; }
+.slide.active { opacity: 1; z-index: 2; }
 
 /* Dark gradient overlay */
 .slide::after {
