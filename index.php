@@ -123,35 +123,36 @@
             </p>
         </div>
 
-        <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:#e5e5e5;" class="reveal">
-            <?php
-            $services = [
-                [
-                    'title' => 'Layanan & Pengaduan Penyakit',
-                    'desc'  => 'Laporkan masalah kesehatan, penyakit menular, atau kondisi lingkungan yang membahayakan warga di lingkungan desa.',
-                    'link'  => 'layanan-pengaduan.php',
-                    'icon'  => '<path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>',
-                ],
-                [
-                    'title' => 'Layanan Hukum',
-                    'desc'  => 'Dapatkan bantuan dan konsultasi hukum untuk permasalahan warga, sengketa tanah, administrasi kependudukan, dan kebutuhan hukum lainnya.',
-                    'link'  => 'layanan-hukum.php',
-                    'icon'  => '<path stroke-linecap="round" stroke-linejoin="round" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"/>',
-                ],
-            ];
-            foreach ($services as $s): ?>
-            <div class="service-card" style="background:#fff;">
-                <div class="service-icon-wrap">
-                    <svg viewBox="0 0 24 24"><?= $s['icon'] ?></svg>
+        <div class="service-img-grid reveal">
+            <!-- Card 1: Kesehatan -->
+            <a href="layanan-pengaduan.php" class="service-img-card">
+                <div class="service-img-bg" style="background-image:url('assets/images/service-kesehatan.png');"></div>
+                <div class="service-img-overlay"></div>
+                <div class="service-img-content">
+                    <span class="service-img-tag">Kesehatan</span>
+                    <h3 class="service-img-title">Layanan & Pengaduan Penyakit</h3>
+                    <p class="service-img-desc">Laporkan masalah kesehatan, penyakit menular, atau kondisi lingkungan yang membahayakan warga di lingkungan desa.</p>
+                    <span class="service-img-cta">
+                        Lihat Layanan
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                    </span>
                 </div>
-                <h3 class="service-title"><?= $s['title'] ?></h3>
-                <p class="service-desc"><?= $s['desc'] ?></p>
-                <a href="<?= $s['link'] ?>" class="service-link">
-                    Lihat Layanan
-                    <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-                </a>
-            </div>
-            <?php endforeach; ?>
+            </a>
+
+            <!-- Card 2: Hukum -->
+            <a href="layanan-hukum.php" class="service-img-card">
+                <div class="service-img-bg" style="background-image:url('assets/images/service-hukum.png');"></div>
+                <div class="service-img-overlay"></div>
+                <div class="service-img-content">
+                    <span class="service-img-tag">Hukum & Administrasi</span>
+                    <h3 class="service-img-title">Layanan Hukum</h3>
+                    <p class="service-img-desc">Dapatkan bantuan dan konsultasi hukum untuk permasalahan warga, sengketa tanah, administrasi kependudukan, dan kebutuhan hukum lainnya.</p>
+                    <span class="service-img-cta">
+                        Lihat Layanan
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                    </span>
+                </div>
+            </a>
         </div>
     </div>
 </section>
