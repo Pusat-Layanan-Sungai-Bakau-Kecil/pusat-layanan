@@ -1,7 +1,7 @@
 <?php $pageTitle = 'Beranda'; require_once 'includes/header.php'; ?>
 
 <!-- ======================================================
-     HERO SLIDER — YLBHI style
+     HERO SLIDER — Black & White Theme
      ====================================================== -->
 <section id="hero" aria-label="Beranda Slider">
 
@@ -11,7 +11,7 @@
     <!-- Slide 2 -->
     <div class="slide" style="background-image:url('assets/images/bg2.png');" role="img" aria-label="Hutan Bakau Sungai Bakau Kecil golden hour"></div>
 
-    <!-- Main content — bottom-left like YLBHI -->
+    <!-- Main content -->
     <div class="hero-content">
         <div class="hero-inner">
             <h1 class="hero-title">
@@ -24,7 +24,7 @@
         </div>
     </div>
 
-    <!-- Slide number bottom-left (YLBHI style) -->
+    <!-- Slide number bottom-left -->
     <div class="slide-number" id="slide-number" aria-live="polite">
         <span class="current" id="slide-current">01</span>
         <span style="color:rgba(255,255,255,0.30); margin:0 5px;">/</span>
@@ -37,7 +37,7 @@
         <button class="dot"        role="tab" aria-selected="false" aria-label="Slide 2" data-index="1"></button>
     </div>
 
-    <!-- Arrow nav bottom-right (YLBHI style) -->
+    <!-- Arrow nav bottom-right -->
     <div class="slide-nav" aria-label="Kontrol Slider">
         <button class="slide-btn" id="btn-prev" aria-label="Slide sebelumnya">
             <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
@@ -47,7 +47,7 @@
         </button>
     </div>
 
-    <!-- Follow us — bottom-right above arrows -->
+    <!-- Follow us -->
     <div class="follow-us" aria-label="Ikuti Kami">
         <span class="follow-us-label">Ikuti Kami</span>
         <a href="#" aria-label="Facebook">
@@ -69,7 +69,7 @@
 
 
 <!-- ======================================================
-     ANNOUNCEMENT BAR
+     ANNOUNCEMENT BAR (Solid Black)
      ====================================================== -->
 <div class="announce-bar" aria-label="Pengumuman Desa">
     <div class="ticker-track" id="ticker">
@@ -99,7 +99,7 @@
      ====================================================== -->
 <section class="stats-section py-12 reveal" aria-label="Statistik Desa">
     <div class="container">
-        <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:0; border:1px solid #e8edf3;">
+        <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:0; border:1px solid #e5e5e5;">
             <?php
             $stats = [
                 ['num' => '3.847', 'label' => 'Penduduk',         'target' => 3847],
@@ -108,7 +108,7 @@
                 ['num' => '98%',   'label' => 'Kepuasan Warga',   'target' => 98],
             ];
             foreach ($stats as $i => $s): ?>
-            <div class="stat-item" style="padding:28px 20px; <?= $i < 3 ? 'border-right:1px solid #e8edf3;' : '' ?>">
+            <div class="stat-item" style="padding:28px 20px; <?= $i < 3 ? 'border-right:1px solid #e5e5e5;' : '' ?>">
                 <span class="stat-num" data-target="<?= $s['target'] ?>"><?= $s['num'] ?></span>
                 <span class="stat-label"><?= $s['label'] ?></span>
             </div>
@@ -133,7 +133,7 @@
             </p>
         </div>
 
-        <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:#e8edf3;" class="reveal">
+        <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:#e5e5e5;" class="reveal">
             <?php
             $services = [
                 [
@@ -170,7 +170,7 @@
 <!-- ======================================================
      TENTANG DESA
      ====================================================== -->
-<section aria-labelledby="about-heading" style="background:#f5f7fa; padding:72px 0; border-top:1px solid #e8edf3;">
+<section aria-labelledby="about-heading" style="background:#fafafa; padding:72px 0; border-top:1px solid #e5e5e5;">
     <div class="container">
         <div style="display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center;" class="reveal">
 
@@ -193,10 +193,10 @@
                     Melalui sistem pusat layanan digital ini, kami berkomitmen memberikan pelayanan publik yang mudah, transparan, dan akuntabel kepada seluruh warga.
                 </p>
                 <div style="display:flex; gap:12px; flex-wrap:wrap;">
-                    <a href="tentang.php" class="btn-primary" style="background:#1a5276; color:#fff; border-color:#1a5276;">
+                    <a href="tentang.php" class="btn-dark">
                         Selengkapnya
                     </a>
-                    <a href="kontak.php" class="btn-outline" style="color:#1a5276; border-color:#1a5276;">
+                    <a href="kontak.php" class="btn-dark-outline">
                         Hubungi Kami
                     </a>
                 </div>
@@ -209,7 +209,7 @@
 <!-- ======================================================
      PENGUMUMAN / BERITA TERBARU
      ====================================================== -->
-<section aria-labelledby="news-heading" style="background:#ffffff; padding:72px 0; border-top:1px solid #e8edf3;">
+<section aria-labelledby="news-heading" style="background:#ffffff; padding:72px 0; border-top:1px solid #e5e5e5;">
     <div class="container">
 
         <div style="display:flex; align-items:flex-end; justify-content:space-between; margin-bottom:36px;" class="reveal">
@@ -218,12 +218,12 @@
                 <span class="divider"></span>
                 <h2 class="section-title" id="news-heading" style="font-size:1.9rem; margin-bottom:0;">Pengumuman Desa</h2>
             </div>
-            <a href="pengumuman.php" style="font-size:12px; font-weight:700; letter-spacing:0.10em; text-transform:uppercase; color:#1a5276; text-decoration:none;">
+            <a href="pengumuman.php" style="font-size:12px; font-weight:700; letter-spacing:0.10em; text-transform:uppercase; color:#111111; text-decoration:none;">
                 Lihat Semua &rarr;
             </a>
         </div>
 
-        <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:#e8edf3;" class="reveal">
+        <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:#e5e5e5;" class="reveal">
             <?php
             $news = [
                 [
@@ -268,7 +268,7 @@
 
 
 <!-- ======================================================
-     CTA SECTION
+     CTA SECTION (Black Theme)
      ====================================================== -->
 <section class="cta-section" style="padding:80px 0;" aria-label="Hubungi Kami">
     <div class="container" style="position:relative; z-index:2;">

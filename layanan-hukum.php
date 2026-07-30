@@ -29,7 +29,7 @@ require_once 'includes/header.php';
                 Cakupan Layanan Hukum Warga
             </h2>
 
-            <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:#e8edf3;">
+            <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:#e5e5e5;">
                 <div style="background:#fff; padding:28px 24px;">
                     <h3 style="font-family:'Playfair Display',serif; font-size:1.15rem; font-weight:700; color:#111; margin:0 0 10px;">Sengketa Lahan &amp; Tanah</h3>
                     <p style="font-size:13px; color:#555; line-height:1.65; margin:0;">
@@ -95,7 +95,7 @@ require_once 'includes/header.php';
                         <textarea rows="5" required placeholder="Uraikan kronologi singkat masalah yang ingin dikonsultasikan secara rahasia dan aman..." style="width:100%; padding:12px 14px; font-size:13.5px; border:1px solid #ccc; background:#fff; outline:none; font-family:inherit; resize:vertical;"></textarea>
                     </div>
 
-                    <button type="submit" class="btn-primary" style="background:#1a5276; color:#fff; border-color:#1a5276; align-self:flex-start; cursor:pointer;">
+                    <button type="submit" class="btn-dark" style="align-self:flex-start; cursor:pointer;">
                         Ajukan Jadwal Konsultasi
                     </button>
                 </form>
@@ -103,22 +103,22 @@ require_once 'includes/header.php';
 
             <!-- Sidebar Info -->
             <div>
-                <div style="background:#f5f7fa; border:1px solid #e8edf3; padding:28px; margin-bottom:24px;">
+                <div style="background:#fafafa; border:1px solid #e5e5e5; padding:28px; margin-bottom:24px;">
                     <h3 style="font-family:'Playfair Display',serif; font-size:1.2rem; font-weight:700; color:#111; margin:0 0 12px;">Pos Bantuan Hukum Desa</h3>
                     <p style="font-size:13px; color:#555; line-height:1.7; margin:0 0 16px;">
                         Jadwal konsultasi tatap muka gratis bersama paralegal / advokat pendamping desa:
                     </p>
                     <div style="font-size:13px; color:#333; line-height:1.8;">
-                        <strong style="color:#1a5276; display:block;">Jadwal Layanan:</strong>
+                        <strong style="color:#111111; display:block;">Jadwal Layanan:</strong>
                         <span>Setiap Hari Selasa &amp; Kamis</span><br>
                         <span>Pukul 09.00 – 14.00 WIB</span><br><br>
-                        <strong style="color:#1a5276; display:block;">Lokasi:</strong>
+                        <strong style="color:#111111; display:block;">Lokasi:</strong>
                         <span>Ruang Mediasi Balai Desa Sungai Bakau Kecil</span>
                     </div>
                 </div>
 
-                <div style="background:#ffffff; border:1px solid #e8edf3; padding:28px;">
-                    <h3 style="font-family:'Playfair Display',serif; font-size:1.2rem; font-weight:700; color:#111; margin:0 0 12px;">Prinsip kerahasiaan</h3>
+                <div style="background:#ffffff; border:1px solid #e5e5e5; padding:28px;">
+                    <h3 style="font-family:'Playfair Display',serif; font-size:1.2rem; font-weight:700; color:#111; margin:0 0 12px;">Prinsip Kerahasiaan</h3>
                     <p style="font-size:13px; color:#555; line-height:1.7; margin:0;">
                         Seluruh informasi dan berkas yang disampaikan dalam layanan hukum desa terjamin kerahasiaannya sesuai ketentuan undang-undang bantuan hukum.
                     </p>

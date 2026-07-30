@@ -70,7 +70,7 @@ require_once 'includes/header.php';
                         <textarea rows="5" required placeholder="Jelaskan secara singkat gejala yang dialami, jumlah orang terdampak, atau masalah yang ditemukan..." style="width:100%; padding:12px 14px; font-size:13.5px; border:1px solid #ccc; background:#fff; outline:none; font-family:inherit; resize:vertical;"></textarea>
                     </div>
 
-                    <button type="submit" class="btn-primary" style="background:#1a5276; color:#fff; border-color:#1a5276; align-self:flex-start; cursor:pointer;">
+                    <button type="submit" class="btn-dark" style="align-self:flex-start; cursor:pointer;">
                         Kirim Laporan Pengaduan
                     </button>
                 </form>
@@ -78,28 +78,28 @@ require_once 'includes/header.php';
 
             <!-- Sidebar Info -->
             <div>
-                <div style="background:#f5f7fa; border:1px solid #e8edf3; padding:28px; margin-bottom:24px;">
+                <div style="background:#fafafa; border:1px solid #e5e5e5; padding:28px; margin-bottom:24px;">
                     <h3 style="font-family:'Playfair Display',serif; font-size:1.2rem; font-weight:700; color:#111; margin:0 0 12px;">Kontak Darurat Kesehatan</h3>
                     <p style="font-size:13px; color:#555; line-height:1.7; margin:0 0 18px;">
                         Jika mengalami kondisi darurat medis yang butuh penanganan secepatnya, segera hubungi kontak berikut:
                     </p>
                     <div style="display:flex; flex-direction:column; gap:12px; font-size:13px;">
                         <div>
-                            <strong style="color:#1a5276; display:block;">Puskesmas Pembantu Desa</strong>
+                            <strong style="color:#111111; display:block;">Puskesmas Pembantu Desa</strong>
                             <span style="color:#444;">(0561) 987-6543</span>
                         </div>
                         <div>
-                            <strong style="color:#1a5276; display:block;">Ambulans Desa (24 Jam)</strong>
+                            <strong style="color:#111111; display:block;">Ambulans Desa (24 Jam)</strong>
                             <span style="color:#444;">0812-3456-7890</span>
                         </div>
                         <div>
-                            <strong style="color:#1a5276; display:block;">Petugas Kesehatan Desa</strong>
+                            <strong style="color:#111111; display:block;">Petugas Kesehatan Desa</strong>
                             <span style="color:#444;">0852-9876-5432</span>
                         </div>
                     </div>
                 </div>
 
-                <div style="background:#ffffff; border:1px solid #e8edf3; padding:28px;">
+                <div style="background:#ffffff; border:1px solid #e5e5e5; padding:28px;">
                     <h3 style="font-family:'Playfair Display',serif; font-size:1.2rem; font-weight:700; color:#111; margin:0 0 12px;">Prosedur Penanganan</h3>
                     <ol style="font-size:13px; color:#555; line-height:1.8; margin:0; padding-left:18px;">
                         <li style="margin-bottom:8px;">Laporan masuk dan diverifikasi tim kesehatan desa.</li>
