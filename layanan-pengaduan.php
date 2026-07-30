@@ -5,7 +5,7 @@ require_once 'includes/header.php';
 
 <!-- Banner Header -->
 <section style="background:#0a0a0a; position:relative; padding:120px 0 60px; overflow:hidden;">
-    <div style="position:absolute; inset:0; background-image:url('assets/images/bg1.jpg'); background-size:cover; background-position:center; opacity:0.25;"></div>
+    <div style="position:absolute; inset:0; background-image:url('assets/images/bg3.png'); background-size:cover; background-position:center; opacity:0.25;"></div>
     <div class="container" style="position:relative; z-index:2;">
         <span class="section-label" style="color:rgba(255,255,255,0.60);">Pusat Layanan Warga</span>
         <h1 style="font-family:'Playfair Display',serif; font-size:clamp(2rem,4vw,3.2rem); font-weight:900; color:#ffffff; margin:0 0 12px; line-height:1.15;">
@@ -80,13 +80,13 @@ require_once 'includes/header.php';
             <div class="form-sidebar">
                 <!-- Accordion Box 1: Kontak Darurat -->
                 <div class="accordion-box">
-                    <button class="accordion-header active" type="button" aria-expanded="true">
+                    <button class="accordion-header" type="button" aria-expanded="false">
                         <span>Kontak Darurat Kesehatan</span>
                         <svg class="accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                             <polyline points="6 9 12 15 18 9"/>
                         </svg>
                     </button>
-                    <div class="accordion-body open">
+                    <div class="accordion-body">
                         <p style="font-size:13px; color:#555; line-height:1.7; margin:0 0 16px;">
                             Jika mengalami kondisi darurat medis yang butuh penanganan secepatnya, segera hubungi kontak berikut:
                         </p>

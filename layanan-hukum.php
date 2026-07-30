@@ -105,13 +105,13 @@ require_once 'includes/header.php';
             <div class="form-sidebar">
                 <!-- Accordion Box 1: Pos Bantuan Hukum -->
                 <div class="accordion-box">
-                    <button class="accordion-header active" type="button" aria-expanded="true">
+                    <button class="accordion-header" type="button" aria-expanded="false">
                         <span>Pos Bantuan Hukum Desa</span>
                         <svg class="accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                             <polyline points="6 9 12 15 18 9"/>
                         </svg>
                     </button>
-                    <div class="accordion-body open">
+                    <div class="accordion-body">
                         <p style="font-size:13px; color:#555; line-height:1.7; margin:0 0 16px;">
                             Jadwal konsultasi tatap muka gratis bersama paralegal / advokat pendamping desa:
                         </p>
