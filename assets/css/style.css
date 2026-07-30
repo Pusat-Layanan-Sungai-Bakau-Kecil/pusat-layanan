@@ -22,26 +22,12 @@ body {
     position: fixed;
     top: 0; left: 0; right: 0;
     z-index: 100;
-    background: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0.88) 0%,
-        rgba(0, 0, 0, 0.60) 45%,
-        rgba(0, 0, 0, 0.20) 75%,
-        transparent 100%
-    );
-    padding-bottom: 20px;
-    transition: background 0.35s ease, padding 0.35s ease;
+    background: transparent;
+    transition: background 0.35s ease;
 }
 
 #navbar.scrolled {
-    background: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0.92) 0%,
-        rgba(0, 0, 0, 0.70) 50%,
-        rgba(0, 0, 0, 0.25) 80%,
-        transparent 100%
-    );
-    padding-bottom: 24px;
+    background: transparent;
 }
 
 .nav-link {
@@ -146,6 +132,22 @@ body {
     min-height: 580px;
     overflow: hidden;
     background: #000000;
+}
+
+/* Top gradient overlay — protects navbar area only, contained within hero */
+#hero::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 220px;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.75) 0%,
+        rgba(0, 0, 0, 0.35) 55%,
+        transparent 100%
+    );
+    z-index: 5;
+    pointer-events: none;
 }
 
 .slide {
